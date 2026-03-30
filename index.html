@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Algı İşitme | Kişiye Özel İşitme Çözümleri — Şişli, İstanbul</title>
+<meta name="description" content="2005'ten bu yana İstanbul Şişli'de kişiye özel işitme cihazı satış ve uygulama merkezi. Oticon, Widex, Unitron çözüm ortaklığı.">
+<link rel="stylesheet" href="_shared.css">
+<style>
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2d1b3d 60%, #1a1a2e 100%);
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 70% 50%, rgba(196,30,58,.18) 0%, transparent 70%);
+}
+.hero-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(196,30,58,.2);
+  border: 1px solid rgba(196,30,58,.4);
+  color: #f5c2ca;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(36px, 5vw, 58px);
+  color: white;
+  line-height: 1.12;
+  margin-bottom: 22px;
+}
+.hero h1 em { color: #f5c2ca; font-style: normal; }
+.hero-lead {
+  font-size: 17px;
+  color: rgba(255,255,255,.72);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  max-width: 480px;
+}
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+.hero-stat-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: white;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.hero-stat-lbl { font-size: 12px; color: rgba(255,255,255,.5); font-weight: 600; }
+
+/* Hero sağ taraf - görsel kutu */
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hero-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 24px 28px;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: all .2s;
+}
+.hero-card:hover { background: rgba(255,255,255,.11); transform: translateX(4px); }
+.hero-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(196,30,58,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.hero-card-title { font-size: 14px; font-weight: 700; color: white; margin-bottom: 4px; }
+.hero-card-text { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.5; }
+
+/* ── BRANDS ── */
+.brands-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 32px;
+}
+.brands-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.brands-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray-mid); white-space: nowrap; }
+.brands-list { display: flex; gap: 32px; align-items: center; flex-wrap: wrap; }
+.brand-item { font-size: 16px; font-weight: 800; color: var(--gray-mid); letter-spacing: -.5px; transition: color .15s; }
+.brand-item:hover { color: var(--red); }
+
+/* ── ÇÖZÜM KARTLARI ── */
+.solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.sol-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  transition: all .22s;
+  position: relative;
+  overflow: hidden;
+}
+.sol-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s;
+}
+.sol-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.sol-card:hover::before { transform: scaleX(1); }
+.sol-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 56px;
+  color: var(--red-light);
+  line-height: 1;
+  margin-bottom: 12px;
+  user-select: none;
+}
+.sol-title { font-size: 16px; font-weight: 700; color: var(--gray); margin-bottom: 12px; }
+.sol-text { font-size: 14px; color: var(--gray-mid); line-height: 1.75; }
+
+/* ── TEST CTA ── */
+.test-cta {
+  background: linear-gradient(135deg, var(--red) 0%, #9e1830 100%);
+  border-radius: 20px;
+  padding: 56px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.test-cta::before {
+  content: '🎧';
+  position: absolute;
+  right: 180px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  opacity: .08;
+}
+.test-cta h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 10px;
+}
+.test-cta p { color: rgba(255,255,255,.8); font-size: 15px; max-width: 480px; line-height: 1.65; }
+.test-cta .btn { background: white; color: var(--red); font-weight: 800; }
+.test-cta .btn:hover { background: var(--gray); color: white; }
+
+/* ── MARKALAR ── */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.partner-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all .22s;
+}
+.partner-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.partner-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 28px;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+.partner-origin { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+.partner-desc { font-size: 14px; color: var(--gray-mid); line-height: 1.7; margin-bottom: 20px; }
+.partner-link { font-size: 13px; font-weight: 700; color: var(--red); text-decoration: none; }
+.partner-link:hover { text-decoration: underline; }
+
+/* ── İLETİŞİM BANDI ── */
+.contact-band {
+  background: var(--gray);
+  padding: 48px 32px;
+}
+.contact-band-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.contact-band h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 26px;
+  color: white;
+  margin-bottom: 6px;
+}
+.contact-band p { font-size: 14px; color: rgba(255,255,255,.6); }
+.contact-band-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .solutions-grid, .partner-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hero { min-height: auto; padding: 60px 20px; }
+  .hero-stats { gap: 24px; }
+  .solutions-grid, .partner-grid { grid-template-columns: 1fr; }
+  .test-cta { padding: 36px 28px; }
+  .test-cta h2 { font-size: 24px; }
+  .contact-band-inner { flex-direction: column; text-align: center; }
+  .brands-inner { gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="LOGO.png" alt="Algı İşitme" class="logo-img" onerror="this.style.display='none'">
+      <div>
+        <span class="logo-text">Algı İşitme</span>
+        <span class="logo-sub">Şişli · İstanbul</span>
+      </div>
+    </a>
+    <nav id="mainNav">
+      <a href="index.html" class="nav-link active">Ana Sayfa</a>
+      <a href="cozum-ortaklari.html" class="nav-link">Çözüm Ortakları</a>
+      <a href="sgk.html" class="nav-link">SGK Ödemesi</a>
+      <a href="fiyatlandirma.html" class="nav-link">Fiyatlandırma</a>
+      <a href="english.html" class="nav-link">English</a>
+      <a href="isitme-testi.html" class="nav-link nav-cta">🎧 Ücretsiz Test</a>
+    </nav>
+    <a href="tel:+905530895781" class="phone-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .16h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006.77 6.77l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>0553 089 57 81</span>
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Menü">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">✦ 2005'ten beri hizmetinizdeyiz</div>
+      <h1>Kişiye Özel<br><em>İşitme Çözümleri</em><br>Sunuyoruz</h1>
+      <p class="hero-lead">İşitme cihazı seçiminde en önemli kriter yaşınız ya da bütçeniz değil — günlük yaşamınızdaki yoğunluğunuz ve ihtiyaçlarınızdır.</p>
+      <div class="hero-actions">
+        <a href="isitme-testi.html" class="btn btn-primary btn-lg">🎧 Ücretsiz İşitme Testi</a>
+        <a href="https://wa.me/905530895781" class="btn btn-ghost btn-lg" target="_blank">💬 WhatsApp</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-num">20+</div><div class="hero-stat-lbl">Yıl Deneyim</div></div>
+        <div><div class="hero-stat-num">3</div><div class="hero-stat-lbl">Dünya Markası</div></div>
+        <div><div class="hero-stat-num">%100</div><div class="hero-stat-lbl">Kişiye Özel</div></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon">🎯</div>
+        <div>
+          <div class="hero-card-title">Kişiye Özel Yaklaşım</div>
+          <div class="hero-card-text">Aynı işitme kaybı olan iki kişi için bile farklı çözümler sunulabilir. Yaşam biçiminiz belirleyicidir.</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🏆</div>
+        <div>
+          <div class="hero-card-title">Sektör Lideri Markalar</div>
+          <div class="hero-card-text">Oticon, Widex ve Unitron ile çözüm ortaklığı — dünya işitme sektörünün en güçlü isimleri.</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🔬</div>
+        <div>
+          <div class="hero-card-title">SGK Anlaşmalı Merkez</div>
+          <div class="hero-card-text">SGK ile anlaşmalı merkezimizde cihazınızı alın, devlet desteğinden yararlanın.</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">📍</div>
+        <div>
+          <div class="hero-card-title">Şişli, İstanbul</div>
+          <div class="hero-card-text">Abide-i Hürriyet Cad. No:143 — Pazartesi–Cuma 09:00–17:30</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS BAR -->
+<div class="brands-bar">
+  <div class="brands-inner">
+    <span class="brands-label">Çözüm Ortaklarımız</span>
+    <div class="brands-list">
+      <span class="brand-item">Oticon</span>
+      <span class="brand-item">Widex</span>
+      <span class="brand-item">Unitron</span>
+    </div>
+  </div>
+</div>
+
+<!-- ÇÖZÜM YAKLAŞIMI -->
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-label">Fark Yaratan Yaklaşım</div>
+    <h2 class="section-title">Doğru işitme cihazı için<br>6 kritik kriter</h2>
+    <p class="section-lead">İşitme cihazı uygulamasında cihazın kalitesi kadar doğru seçim ve uygulama da belirleyicidir.</p>
+
+    <div class="solutions-grid">
+      <div class="sol-card">
+        <div class="sol-num">01</div>
+        <div class="sol-title">Bireyin Yaşam Biçimi</div>
+        <div class="sol-text">En önemli kriter kişinin günlük yaşamdaki yoğunluğudur. Yaş ve alım gücüne göre değil, yaşam biçimine göre cihaz seçilmelidir.</div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">02</div>
+        <div class="sol-title">Doğru Cihaz Tipi</div>
+        <div class="sol-text">Estetik kaygıyla yetersiz güçte cihaz uygulanmamalı. Düşük frekanslarda az kaybı olanlarda kulak içi cihaz tıkanıklık yaratabilir.</div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">03</div>
+        <div class="sol-title">Beklentinin Doğru Aktarımı</div>
+        <div class="sol-text">Beyin işitme yolunun performansı cihazdan verim almada kritik önem taşır. Gerçekçi beklentiler başarıyı artırır.</div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">04</div>
+        <div class="sol-title">Adaptasyon ve Takip</div>
+        <div class="sol-text">İlk ayarda tam hedefe değil tolere edilebilir bir hedefe ulaşılır. Zamanla yapılan ince ayarlarla tam hedefe ulaşılır.</div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">05</div>
+        <div class="sol-title">Doğru Akustik Parametreler</div>
+        <div class="sol-text">Doğru kalıp ya da kubbenin seçimi, cihaz ayarı kadar önemlidir. Yanlış akustik parametreler verimsizliğe yol açar.</div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-num">06</div>
+        <div class="sol-title">Fiziksel ve Bilişsel Kapasite</div>
+        <div class="sol-text">Kişinin fiziksel ve bilişsel kabiliyetlerine göre cihaz belirlenmesi, cihazın daha uzun ve verimli kullanılmasını sağlar.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ÜCRETSİZ TEST CTA -->
+<section class="section section-gray">
+  <div class="section-inner">
+    <div class="test-cta">
+      <div>
+        <h2>Ücretsiz İşitme Testi</h2>
+        <p>Evinizdeki konfordan çıkmadan, bilimsel tabanlı tarama testimizi yapın. 7 farklı frekansta her iki kulağınız ayrı ayrı test edilir.</p>
+      </div>
+      <a href="isitme-testi.html" class="btn btn-lg">🎧 Testi Şimdi Başlat →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ÇÖZÜM ORTAKLARI -->
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-label">Markalarımız</div>
+    <h2 class="section-title">Sektör lideri markalar ile<br>çözüm ortaklığı</h2>
+    <div class="partner-grid">
+      <div class="partner-card">
+        <div class="partner-name">Oticon</div>
+        <div class="partner-origin">Danimarka · Demant Holding</div>
+        <p class="partner-desc">1904'te kurulan Oticon, BrainHearing yaklaşımı ve 360° ses alma algoritmasıyla sektörün en yenilikçi markasıdır.</p>
+        <a href="cozum-ortaklari.html" class="partner-link">Daha fazla bilgi →</a>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">Widex</div>
+        <div class="partner-origin">Danimarka · W/S Holding</div>
+        <p class="partner-desc">PureSound teknolojisi ile üstün ses kalitesi sunan Widex, 1956'dan bu yana işitme sektörünün güçlü ismi.</p>
+        <a href="cozum-ortaklari.html" class="partner-link">Daha fazla bilgi →</a>
+      </div>
+      <div class="partner-card">
+        <div class="partner-name">Unitron</div>
+        <div class="partner-origin">Kanada · Sonova AG</div>
+        <p class="partner-desc">Son teknolojiyi en basit şekilde kullanıcılara sunan Kanada merkezli Unitron, Sonova Grubu markasıdır.</p>
+        <a href="cozum-ortaklari.html" class="partner-link">Daha fazla bilgi →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM BANDI -->
+<div class="contact-band">
+  <div class="contact-band-inner">
+    <div>
+      <h3>Randevu Alın</h3>
+      <p>İşitme cihazı denemesi için Şişli Algı İşitme'yi ziyaret edin. Ücretsiz deneme, danışmanlık ve en iyi fiyatlar.</p>
+    </div>
+    <div class="contact-band-actions">
+      <a href="https://wa.me/905530895781" class="btn btn-primary" target="_blank">💬 WhatsApp</a>
+      <a href="tel:+902122195011" class="btn btn-ghost" style="color:white;border-color:rgba(255,255,255,.3)">📞 0212 219 50 11</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo-link" style="margin-bottom:14px">
+        <div>
+          <span class="logo-text">Algı İşitme</span>
+          <span class="logo-sub" style="color:rgba(255,255,255,.4)">Şişli · İstanbul</span>
+        </div>
+      </div>
+      <p>2005'ten bu yana İstanbul Şişli'de kişiye özel işitme cihazı satış ve uygulama merkezi. Oticon, Widex ve Unitron çözüm ortağı.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sayfalar</h4>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="cozum-ortaklari.html">Çözüm Ortakları</a>
+      <a href="sgk.html">SGK Ödemesi</a>
+      <a href="fiyatlandirma.html">Fiyatlandırma</a>
+      <a href="english.html">English</a>
+      <a href="isitme-testi.html">Ücretsiz İşitme Testi</a>
+    </div>
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <div class="footer-contact">📍 Merkez Mah, Abide-i Hürriyet Cad. No:143<br>Şişli / İstanbul</div>
+      <div class="footer-contact">📞 0212 219 50 11</div>
+      <div class="footer-contact">📞 0850 885 05 76</div>
+      <div class="footer-contact">📱 0553 089 57 81</div>
+      <div class="footer-contact">✉️ algiisitme.ist@gmail.com</div>
+    </div>
+    <div class="footer-col">
+      <h4>Çalışma Saatleri</h4>
+      <div class="footer-contact">Pazartesi – Cuma<br>09:00 – 17:30</div>
+      <div style="margin-top:16px">
+        <a href="https://wa.me/905530895781" class="btn btn-primary btn-sm" target="_blank" style="display:inline-flex">💬 WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Algı İşitme İstanbul — Tüm Hakları Saklıdır</span>
+    <span>Şişli, İstanbul, Türkiye</span>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/905530895781" class="wa-float" target="_blank" title="WhatsApp ile ulaşın">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>

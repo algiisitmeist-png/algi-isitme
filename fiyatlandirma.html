@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiyatlandırma | Algı İşitme</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+.tip-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 18px; }
+.tip-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  border: 1px solid var(--border);
+  transition: box-shadow .2s;
+}
+.tip-item:hover { box-shadow: var(--shadow-sm); }
+.tip-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tip-content h3 { font-size: 15px; font-weight: 700; color: var(--gray); margin-bottom: 6px; }
+.tip-content p { font-size: 14px; color: var(--gray-mid); line-height: 1.75; }
+.tip-content strong { color: var(--gray); }
+.highlight-box {
+  background: linear-gradient(135deg, var(--red) 0%, #9e1830 100%);
+  border-radius: 20px;
+  padding: 48px 40px;
+  color: white;
+  margin-top: 40px;
+  text-align: center;
+}
+.highlight-box h2 { font-family: 'DM Serif Display', serif; font-size: 28px; margin-bottom: 12px; }
+.highlight-box p { font-size: 15px; color: rgba(255,255,255,.8); margin-bottom: 24px; }
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo-link">
+      <img src="LOGO.png" alt="Algı İşitme" class="logo-img" onerror="this.style.display='none'">
+      <div><span class="logo-text">Algı İşitme</span><span class="logo-sub">Şişli · İstanbul</span></div>
+    </a>
+    <nav id="mainNav">
+      <a href="index.html" class="nav-link">Ana Sayfa</a>
+      <a href="cozum-ortaklari.html" class="nav-link">Çözüm Ortakları</a>
+      <a href="sgk.html" class="nav-link">SGK Ödemesi</a>
+      <a href="fiyatlandirma.html" class="nav-link active">Fiyatlandırma</a>
+      <a href="english.html" class="nav-link">English</a>
+      <a href="isitme-testi.html" class="nav-link nav-cta">🎧 Ücretsiz Test</a>
+    </nav>
+    <a href="tel:+905530895781" class="phone-header">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .16h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8a16 16 0 006.77 6.77l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>0553 089 57 81</span>
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-badge">Fiyat Rehberi</div>
+    <h1>İşitme Cihazı Fiyatlandırması</h1>
+    <p>Fiyat listesi yasal sebeplerle yayınlanamaz — ancak doğru seçim yapmanız için bilmeniz gereken her şeyi anlattık.</p>
+  </div>
+</div>
+
+<section class="section section-white">
+  <div class="section-inner">
+    <div class="section-label">Satın Almadan Önce</div>
+    <h2 class="section-title">İşitme cihazı alırken<br>dikkat edilmesi gereken 7 nokta</h2>
+    <p class="section-lead">İşitme merkezlerinin yasal sebeplerden dolayı internet sitelerinde fiyat listesi paylaşması yasaktır. Ancak doğru seçim yapmanız için size yardımcı olacak önemli noktalara dikkat etmenizi öneririz.</p>
+
+    <ul class="tip-list">
+      <li class="tip-item">
+        <div class="tip-num">1</div>
+        <div class="tip-content">
+          <h3>Türkiye'de grup şirketi olan markayı tercih edin</h3>
+          <p>Eğer herhangi bir distribütör üzerinden Türkiye'de satılan bir markayı satın alırsanız, her zaman o distribütörün ana firma ile ilişkilerine bağımlı olacaksınız. Algı İşitme olarak sattığımız <strong>Oticon, Widex ve Unitron</strong> markaları Türkiye'de grup şirketi olarak faaliyet göstermektedir.</p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">2</div>
+        <div class="tip-content">
+          <h3>Son teknoloji platform olmasına dikkat edin</h3>
+          <p>Alacağınız ürünün son teknoloji (platform) olmasına dikkat edin. İlgilendiğiniz markanın en güncel ürünlerini araştırın ve onları tercih edin.</p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">3</div>
+        <div class="tip-content">
+          <h3>Cihazın sınıfını iyi öğrenin</h3>
+          <p>Aynı çıkış gücü ve kazanca sahip cihazlar, gürültülü ortamdaki performans farkına göre sınıflandırılır ve fiyatlandırılır. Bu sınıf farkını anlamak için bizden yardım alabilirsiniz.</p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">4</div>
+        <div class="tip-content">
+          <h3>Karşılaştırırken aynı sınıf cihazları karşılaştırın</h3>
+          <p>Farklı markaların fiyatlarını karşılaştırıyorsanız, aynı sınıf cihazları karşılaştırın. Bu denklik için her zaman bizden yardım alabilirsiniz.</p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">5</div>
+        <div class="tip-content">
+          <h3>"Aracılar"a dikkat edin</h3>
+          <p>Her kademede karşınıza çıkabilecek "aracılar" nedeniyle size yansıyan indirim tutarı azalabilir. İşitme cihazı firmanızı <strong>aracılardan bağımsız</strong> olarak kendiniz belirleyin.</p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">6</div>
+        <div class="tip-content">
+          <h3>Kampanya tuzaklarına düşmeyin</h3>
+          <p>Ana firmanın tavsiye edilen fiyat listesindeki fiyatı birkaç farklı noktadan teyit edin. Önce şişirilen sonra da %X indirim yapılan kampanya tuzaklarına düşmeyin. <strong>İndirim oranına değil, cebinizden çıkacak toplam tutara bakın.</strong></p>
+        </div>
+      </li>
+      <li class="tip-item">
+        <div class="tip-num">7</div>
+        <div class="tip-content">
+          <h3 style="color:var(--red)">EN ÖNEMLİSİ: Bir çözüm satın alıyorsunuz</h3>
+          <p>Aslında paranızı sadece cihaza değil, işitme kaybınıza ve yaşantınıza uygun <strong>iyi bir cihaz ile birlikte iyi bir hizmet almaya</strong> veriyorsunuz — yani bir <strong>ÇÖZÜM</strong> satın alıyorsunuz. Uzmanlığına güvendiğiniz ve rahatlıkla ulaşabildiğiniz kişi ve işitme merkezini tercih edin.<br><br><em>Algı İşitme olarak yıllardır parolamız: "KİŞİYE ÖZEL İŞİTME ÇÖZÜMLERİ"</em></p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="highlight-box">
+      <h2>Fiyat bilgisi almak için bize ulaşın</h2>
+      <p>Size en uygun cihazı ve SGK desteğiyle birlikte net ödeme tutarınızı öğrenmek için hemen iletişime geçin.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/905530895781" class="btn" style="background:white;color:var(--red);font-weight:800" target="_blank">💬 WhatsApp</a>
+        <a href="tel:+902122195011" class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:white">📞 0212 219 50 11</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div style="margin-bottom:14px"><span class="logo-text">Algı İşitme</span><span class="logo-sub" style="color:rgba(255,255,255,.4);display:block;margin-top:2px">Şişli · İstanbul</span></div>
+      <p>2005'ten bu yana İstanbul Şişli'de kişiye özel işitme cihazı satış ve uygulama merkezi.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sayfalar</h4>
+      <a href="index.html">Ana Sayfa</a>
+      <a href="cozum-ortaklari.html">Çözüm Ortakları</a>
+      <a href="sgk.html">SGK Ödemesi</a>
+      <a href="fiyatlandirma.html">Fiyatlandırma</a>
+      <a href="english.html">English</a>
+      <a href="isitme-testi.html">Ücretsiz İşitme Testi</a>
+    </div>
+    <div class="footer-col">
+      <h4>İletişim</h4>
+      <div class="footer-contact">📍 Abide-i Hürriyet Cad. No:143 Şişli/İstanbul</div>
+      <div class="footer-contact">📞 0212 219 50 11</div>
+      <div class="footer-contact">📱 0553 089 57 81</div>
+    </div>
+    <div class="footer-col">
+      <h4>Çalışma Saatleri</h4>
+      <div class="footer-contact">Pazartesi – Cuma<br>09:00 – 17:30</div>
+    </div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 Algı İşitme İstanbul — Tüm Hakları Saklıdır</span></div>
+</footer>
+<a href="https://wa.me/905530895781" class="wa-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>
