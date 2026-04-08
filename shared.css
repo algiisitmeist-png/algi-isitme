@@ -67,7 +67,6 @@ body {
 .logo-img {
   height: 48px;
   object-fit: contain;
-  mix-blend-mode: multiply;
 }
 .logo-text {
   font-family: 'DM Serif Display', serif;
